@@ -14,7 +14,7 @@ RUN apt-get install nginx git -y
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Projektverzeichnis kopieren
-COPY ./phone-book-app /var/www/phone-book-app
+COPY ./ /var/www/phone-book-app
 
 RUN composer install -d /var/www/phone-book-app
 
